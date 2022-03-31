@@ -1,0 +1,64 @@
+
+.tela{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo{
+    width: 614px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #eeefef;
+    flex-direction: column;
+}
+
+
+.topo{
+    background-color: #CF2B2B;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 92px;
+}
+
+.texto-topo{
+    margin-left: 21px;
+}
+
+.texto-topo h2{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+
+.texto-topo h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-secao{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    color: #333333;
+    margin-left: 19px 31px 0px 0px;
+    
+}
