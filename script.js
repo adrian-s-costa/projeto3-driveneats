@@ -2,18 +2,24 @@ function marcar(elementoClicado){
     
     console.log(elementoClicado)
     
-    const pratoselecionado = document.querySelector(".selec");
+    const pratoselecionado = document.querySelector(".prato.selec");
     
+
     if (pratoselecionado !== null  && elementoClicado.classList.contains("prato")){
     
         
         pratoselecionado.classList.remove("selec") 
+        pratoselecionado.querySelector("ion-icon").classList.remove("icon-selec")
+       
         
     
     
     } 
 
+    
+
     elementoClicado.classList.add("selec"); 
+    elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
     if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
     
@@ -84,5 +90,13 @@ function marcar3(elementoClicado){
     }
 }
 
+function confirmacao(){
+    const alert = document.querySelector(".alert.hidden")
 
+    alert.classList.remove("hidden")
+}
 
+function fecharalert(){
+    const fecha = document.querySelector(".alert")
+    fecha.classList.add("hidden")
+}

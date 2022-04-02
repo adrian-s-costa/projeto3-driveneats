@@ -30,7 +30,7 @@
                         <p class="nome-item">Frango Yin-Yang</p>
                         <p class="desc-item">Um pouco de batata, um pouco de salada</p>
                         <p class="preco-item">R$14,90</p>
-                        <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+                        <span><ion-icon name="checkmark-circle" class="icon"></ion-icon></span>
                     </div>
                     <div class="prato" onclick="marcar(this)">
                         <img src="imagens/frango.png">
@@ -112,7 +112,7 @@
             </div>
             <div class="barra-botao">
                 <button class="selecione">Selecione os 3 itens para fechar o pedido</button>
-                <button class="pedir hidden">Fechar pedido</button>
+                <button class="pedir hidden" onclick="confirmacao()">Fechar pedido</button>
             </div>
             
                 
@@ -120,9 +120,7 @@
         </div>
     </div>
 
-    <!-- Alert de fechamento de pedido
-
-    <div class="alert">
+    <div class="alert hidden">
                     
         <div>
             Confirme seu pedido
@@ -148,16 +146,14 @@
         <div class="botoes">
             
             <button class="alert-btn">Tudo certo, pode pedir</button>
-                
             
-            
-            <button class="alert-btn baixo">Cancelar</button>
+            <button class="alert-btn baixo" onclick="fecharalert()">Cancelar</button>
             
         </div>
 
     </div>
 
-    -->
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
