@@ -14,6 +14,16 @@ function marcar(elementoClicado){
     } 
 
     elementoClicado.classList.add("selec"); 
+
+    if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
+    
+        const botao = document.querySelector(".pedir")
+        const selec = document.querySelector(".selecione")
+    
+    
+        botao.classList.remove("hidden")
+        selec.classList.add("hidden")
+    }
 }
 
 
@@ -36,6 +46,16 @@ function marcar2(elementoClicado){
 
     elementoClicado.classList.add("selec"); 
     
+    if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
+    
+        const botao = document.querySelector(".pedir")
+        const selec = document.querySelector(".selecione")
+    
+    
+        botao.classList.remove("hidden")
+        selec.classList.add("hidden")
+    }
+    
 }
 
 function marcar3(elementoClicado){
@@ -51,5 +71,18 @@ function marcar3(elementoClicado){
 
     elementoClicado.classList.add("selec")
 
+
+
+    if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
+    
+        const botao = document.querySelector(".pedir")
+        const selec = document.querySelector(".selecione")
+    
+    
+        botao.classList.remove("hidden")
+        selec.classList.add("hidden")
+    }
 }
+
+
 
