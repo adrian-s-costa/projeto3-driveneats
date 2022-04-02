@@ -2,14 +2,14 @@ function marcar(elementoClicado){
     
     console.log(elementoClicado)
     
-    const pratoselecionado = document.querySelector(".prato.selec");
+    const pratoSelecionado = document.querySelector(".prato.selec");
     
 
-    if (pratoselecionado !== null  && elementoClicado.classList.contains("prato")){
+    if (pratoSelecionado !== null  && elementoClicado.classList.contains("prato")){
     
         
-        pratoselecionado.classList.remove("selec") 
-        pratoselecionado.querySelector("ion-icon").classList.remove("icon-selec")
+        pratoSelecionado.classList.remove("selec") 
+        pratoSelecionado.querySelector("ion-icon").classList.remove("icon-selec")
        
         
     
@@ -37,20 +37,21 @@ function marcar2(elementoClicado){
 
     console.log(elementoClicado)
 
-    const bebidaselecionada = document.querySelector(".bebida.selec");
+    const bebidaSelecionada = document.querySelector(".bebida.selec");
     
 
-    if (bebidaselecionada !== null  && elementoClicado.classList.contains("bebida")){
+    if (bebidaSelecionada !== null  && elementoClicado.classList.contains("bebida")){
     
         
-        bebidaselecionada.classList.remove("selec")
-        
+        bebidaSelecionada.classList.remove("selec")
+        bebidaSelecionada.querySelector("ion-icon").classList.remove("icon-selec")
     
     
     } 
 
 
     elementoClicado.classList.add("selec"); 
+    elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
     
     if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
     
@@ -71,12 +72,12 @@ function marcar3(elementoClicado){
     if(sobremesaSelecionada !== null && elementoClicado.classList.contains("sobremesa")){
 
         sobremesaSelecionada.classList.remove("selec")
-
+        sobremesaSelecionada.querySelector("ion-icon").classList.remove("icon-selec")
 
     }
 
     elementoClicado.classList.add("selec")
-
+    elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
 
     if (document.querySelector(".prato.selec") !== null && document.querySelector(".bebida.selec") !== null && document.querySelector(".sobremesa.selec") !== null ){
