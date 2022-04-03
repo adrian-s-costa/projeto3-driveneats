@@ -138,7 +138,7 @@ img{
 .barra-botao{
     display: flex;
     height: 92px;
-    width: 100%;
+    width: 80%;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -239,7 +239,7 @@ strong{
     font-size: 22px;
     line-height: 26px;
     margin-top: 10px;
-    width: 329px;
+    width: 90%;
 }
 
 .botoes{
