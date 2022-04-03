@@ -4,6 +4,7 @@ let nomeBebida
 let precoBebida
 let nomeSobremesa
 let precoSobremesa
+let precoPedido
 
 function marcar(elementoClicado){
     
@@ -17,16 +18,12 @@ function marcar(elementoClicado){
         pratoSelecionado.classList.remove("selec") 
         pratoSelecionado.querySelector("ion-icon").classList.remove("icon-selec")
        
-        
-    
     
     } 
 
     
     nomePrato = elementoClicado.querySelector(".nome-item").innerHTML
     precoPrato = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
-    console.log(nomePrato)
-    console.log(precoPrato)
     elementoClicado.classList.add("selec"); 
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
@@ -44,7 +41,6 @@ function marcar(elementoClicado){
 
 function marcar2(elementoClicado){
 
-    console.log(elementoClicado)
 
     const bebidaSelecionada = document.querySelector(".bebida.selec");
     
@@ -61,8 +57,6 @@ function marcar2(elementoClicado){
 
     nomeBebida = elementoClicado.querySelector(".nome-item").innerHTML
     precoBebida = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
-    console.log(nomeBebida)
-    console.log(precoBebida)
     elementoClicado.classList.add("selec"); 
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
     
@@ -92,8 +86,6 @@ function marcar3(elementoClicado){
 
     nomeSobremesa = elementoClicado.querySelector(".nome-item").innerHTML
     precoSobremesa = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
-    console.log(nomeSobremesa)
-    console.log(precoSobremesa)
     elementoClicado.classList.add("selec")
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
@@ -121,12 +113,6 @@ function confirmacao(){
     const precoSobremesaFinal = document.querySelector(".preco-sobremesa-final")
     const totalPedido = document.querySelector(".total-pedido")
 
-    console.log(nomePratoFinal)
-    console.log(precoPrato)
-    console.log(nomeBebida)
-    console.log(precoBebida)
-    console.log(nomeSobremesa)
-    console.log(precoSobremesa)
 
     nomePratoFinal.innerHTML = nomePrato
     precoPratoFinal.innerHTML = precoPrato
@@ -134,8 +120,9 @@ function confirmacao(){
     precoBebidaFinal.innerHTML = precoBebida
     nomeSobremesaFinal.innerHTML = nomeSobremesa
     precoSobremesaFinal.innerHTML = precoSobremesa
-    totalPedido.innerHTML = (parseFloat(precoPrato) + parseFloat(precoBebida) + parseFloat(precoSobremesa)).toFixed(2)
+    totalPedido.innerHTML = ("R$ ") + (parseFloat(precoPrato) + parseFloat(precoBebida) + parseFloat(precoSobremesa)).toFixed(2)
 
+    precoPedido = totalPedido.innerHTML
 
 }
 
@@ -144,3 +131,19 @@ function fecharalert(){
     fecha.classList.add("hidden")
 }
 
+
+function fazerPedido(){
+    
+    let nome = prompt("Qual seu nome?")
+    let endereco = prompt("Qual o endereço de entrega?")
+
+    var celular = "5567992214009"
+      
+    var texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: ${precoPedido}\n\nNome: ${nome}\nEndereço: ${endereco} `
+      
+    texto = window.encodeURIComponent(texto)
+    
+    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + texto, "_blank")
+        
+
+}
