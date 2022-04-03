@@ -260,10 +260,6 @@ strong{
     animation-duration: 1s;
 }
 
-.saida{
-    animation-name: saida;
-    animation-duration: 1s;
-}
 
 @keyframes animacao {
 
@@ -276,14 +272,3 @@ strong{
 
 }
 
-@keyframes saida    {
-    
-    100%{
-        
-        transform: translateY( 700px);
-        opacity: 0;
-        
-    }
-    
-
-}
