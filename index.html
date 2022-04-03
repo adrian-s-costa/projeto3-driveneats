@@ -34,16 +34,16 @@
                     </div>
                     <div class="prato" onclick="marcar(this)">
                         <img src="imagens/frango.png">
-                        <p class="nome-item">Frango Yin-Yang</p>
+                        <p class="nome-item">Salada Yin-Yang</p>
                         <p class="desc-item">Um pouco de batata, um pouco de salada</p>
-                        <p class="preco-item">R$14,90</p>
+                        <p class="preco-item">R$20,90</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
                     <div class="prato" onclick="marcar(this)">
                         <img src="imagens/frango.png">
-                        <p class="nome-item">Frango Yin-Yang</p>
+                        <p class="nome-item">Bife Yin-Yang</p>
                         <p class="desc-item">Um pouco de batata, um pouco de salada</p>
-                        <p class="preco-item">R$14,90</p>
+                        <p class="preco-item">R$10,90</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
                 </div>
@@ -56,9 +56,9 @@
                 <div class="opcoes-especificas">
                     <div class="bebida" onclick="marcar2(this)">
                         <img src="imagens/coca.png">
-                        <p class="nome-item">Coquinha gelada</p>
+                        <p class="nome-item">Coquinha quente</p>
                         <p class="desc-item">Lata 350ml</p>
-                        <p class="preco-item">R$4,90</p>
+                        <p class="preco-item">R$3,00</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
 
@@ -72,9 +72,9 @@
 
                     <div class="bebida" onclick="marcar2(this)">
                         <img src="imagens/coca.png">
-                        <p class="nome-item">Coquinha gelada</p>
+                        <p class="nome-item">Energético</p>
                         <p class="desc-item">Lata 350ml</p>
-                        <p class="preco-item">R$4,90</p>
+                        <p class="preco-item">R$10,00</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
                 </div>
@@ -95,24 +95,24 @@
 
                     <div class="sobremesa" onclick="marcar3(this)">
                         <img src="imagens/pudim.png">
-                        <p class="nome-item">Pudim</p>
+                        <p class="nome-item">Petit Gateau</p>
                         <p class="desc-item">Apenas pudim</p>
-                        <p class="preco-item">R$7,90</p>
+                        <p class="preco-item">R$9,00</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
 
                     <div class="sobremesa" onclick="marcar3(this)">
                         <img src="imagens/pudim.png">
-                        <p class="nome-item">Pudim</p>
+                        <p class="nome-item">Sorvetao</p>
                         <p class="desc-item">Apenas pudim</p>
-                        <p class="preco-item">R$7,90</p>
+                        <p class="preco-item">R$8,90</p>
                         <ion-icon name="checkmark-circle" class="icon"></ion-icon>
                     </div>
                 </div>
             </div>
             <div class="barra-botao">
                 <button class="selecione">Selecione os 3 itens para fechar o pedido</button>
-                <button class="pedir hidden" onclick="confirmacao()">Fechar pedido</button>
+                <button class="pedir hidden" onclick="confirmacao()" >Fechar pedido</button>
             </div>
             
                 
@@ -127,20 +127,20 @@
         </div>
         
         <div>
-            <p>Frango Yin-Yang</p>
-            <p>14,90</p>
+            <p class="nome-prato-final">Frango Yin-Yang</p>
+            <p class="preco-prato-final">14,90</p>
         </div>
         <div>
-            <p>Coquinha gelada</p>
-            <p>4,90</p>
+            <p class="nome-bebida-final">Coquinha gelada</p>
+            <p class="preco-bebida-final">4,90</p>
         </div>
         <div>
-            <p>Pudim</p>
-            <p>7,90</p>
+            <p class="nome-sobremesa-final">Pudim</p>
+            <p class="preco-sobremesa-final">7,90</p>
         </div>
         <div>
             <strong>TOTAL</strong>
-            <strong>27,70</strong>
+            <strong class="total-pedido">R$ 27,70</strong>
         </div>
 
         <div class="botoes">

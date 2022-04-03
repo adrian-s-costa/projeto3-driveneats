@@ -1,11 +1,17 @@
+let nomePrato
+let precoPrato
+let nomeBebida
+let precoBebida
+let nomeSobremesa
+let precoSobremesa
+
 function marcar(elementoClicado){
     
-    console.log(elementoClicado)
     
     const pratoSelecionado = document.querySelector(".prato.selec");
     
 
-    if (pratoSelecionado !== null  && elementoClicado.classList.contains("prato")){
+    if (pratoSelecionado !== null && elementoClicado.classList.contains("prato")){
     
         
         pratoSelecionado.classList.remove("selec") 
@@ -17,7 +23,10 @@ function marcar(elementoClicado){
     } 
 
     
-
+    nomePrato = elementoClicado.querySelector(".nome-item").innerHTML
+    precoPrato = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
+    console.log(nomePrato)
+    console.log(precoPrato)
     elementoClicado.classList.add("selec"); 
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
@@ -50,6 +59,10 @@ function marcar2(elementoClicado){
     } 
 
 
+    nomeBebida = elementoClicado.querySelector(".nome-item").innerHTML
+    precoBebida = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
+    console.log(nomeBebida)
+    console.log(precoBebida)
     elementoClicado.classList.add("selec"); 
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
     
@@ -76,6 +89,11 @@ function marcar3(elementoClicado){
 
     }
 
+
+    nomeSobremesa = elementoClicado.querySelector(".nome-item").innerHTML
+    precoSobremesa = elementoClicado.querySelector(".preco-item").innerHTML.replace("R$" , "").replace(",",".")
+    console.log(nomeSobremesa)
+    console.log(precoSobremesa)
     elementoClicado.classList.add("selec")
     elementoClicado.querySelector("ion-icon").classList.add("icon-selec")
 
@@ -93,11 +111,36 @@ function marcar3(elementoClicado){
 
 function confirmacao(){
     const alert = document.querySelector(".alert.hidden")
-
     alert.classList.remove("hidden")
+
+    let nomePratoFinal = document.querySelector(".nome-prato-final")
+    const precoPratoFinal = document.querySelector(".preco-prato-final")
+    const nomeBebidaFinal = document.querySelector(".nome-bebida-final")
+    const precoBebidaFinal = document.querySelector(".preco-bebida-final")
+    const nomeSobremesaFinal = document.querySelector(".nome-sobremesa-final")
+    const precoSobremesaFinal = document.querySelector(".preco-sobremesa-final")
+    const totalPedido = document.querySelector(".total-pedido")
+
+    console.log(nomePratoFinal)
+    console.log(precoPrato)
+    console.log(nomeBebida)
+    console.log(precoBebida)
+    console.log(nomeSobremesa)
+    console.log(precoSobremesa)
+
+    nomePratoFinal.innerHTML = nomePrato
+    precoPratoFinal.innerHTML = precoPrato
+    nomeBebidaFinal.innerHTML = nomeBebida
+    precoBebidaFinal.innerHTML = precoBebida
+    nomeSobremesaFinal.innerHTML = nomeSobremesa
+    precoSobremesaFinal.innerHTML = precoSobremesa
+    totalPedido.innerHTML = (parseFloat(precoPrato) + parseFloat(precoBebida) + parseFloat(precoSobremesa)).toFixed(2)
+
+
 }
 
 function fecharalert(){
     const fecha = document.querySelector(".alert")
     fecha.classList.add("hidden")
 }
+
