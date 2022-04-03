@@ -1,6 +1,10 @@
-
 body{
     position: relative;
+    font-family: 'Roboto';
+}
+
+.fonte-alternativa{
+    font-family: 'Righteous';
 }
 
 .tela{
@@ -36,7 +40,6 @@ body{
 }
 
 .texto-topo h2{
-    font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -46,7 +49,6 @@ body{
 }
 
 .texto-topo h3{
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -61,7 +63,6 @@ body{
 }
 
 .texto-secao{
-    font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -83,6 +84,7 @@ body{
 
 .opcoes-especificas div{
     background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     width: 172px;
     height: 216px;
@@ -92,12 +94,11 @@ body{
     padding: 18px 14px 13px 14px; 
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto';
     position: relative;
 }
 
 .selec{
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F !important;
     
 }
 
@@ -138,7 +139,7 @@ img{
 .barra-botao{
     display: flex;
     height: 92px;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -153,7 +154,6 @@ button{
     background-color:  #CBCBCB;
     border-radius: 50px;
     color: #FFFFFF;
-    font-family: 'Roboto';
     border-style: none;
     text-align: center;
     font-size: 20px;
@@ -189,11 +189,11 @@ button{
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     flex-direction: column;
-    font-family: 'Roboto';
     padding: 0px 25px 0px 25px;
     position: fixed;
     top: 30%;
-    left: 10%;
+    left: 12%;
+    
 }
 
 .alert div{
@@ -252,4 +252,38 @@ strong{
     background-color: #50D074;
     color: #FFFFFF;
     margin-top: 0px;
+}
+
+
+.animacao{
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+
+.saida{
+    animation-name: saida;
+    animation-duration: 1s;
+}
+
+@keyframes animacao {
+
+
+
+    0%{
+        transform: translateY( 700px);
+        opacity: 0;
+    }
+
+}
+
+@keyframes saida    {
+    
+    100%{
+        
+        transform: translateY( 700px);
+        opacity: 0;
+        
+    }
+    
+
 }

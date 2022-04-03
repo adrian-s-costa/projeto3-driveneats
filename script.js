@@ -104,6 +104,7 @@ function marcar3(elementoClicado){
 function confirmacao(){
     const alert = document.querySelector(".alert.hidden")
     alert.classList.remove("hidden")
+    alert.classList.add("animacao")
 
     let nomePratoFinal = document.querySelector(".nome-prato-final")
     const precoPratoFinal = document.querySelector(".preco-prato-final")
@@ -128,18 +129,19 @@ function confirmacao(){
 
 function fecharalert(){
     const fecha = document.querySelector(".alert")
+    fecha.classList.remove("animacao")
     fecha.classList.add("hidden")
 }
 
 
 function fazerPedido(){
     
-    let nome = prompt("Qual seu nome?")
-    let endereco = prompt("Qual o endereço de entrega?")
+    const nome = prompt("Qual seu nome?")
+    const endereco = prompt("Qual o endereço de entrega?")
 
-    var celular = "5567992214009"
+    const celular = "5567992214009"
       
-    var texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: ${precoPedido}\n\nNome: ${nome}\nEndereço: ${endereco} `
+    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: ${precoPedido}\n\nNome: ${nome}\nEndereço: ${endereco} `
       
     texto = window.encodeURIComponent(texto)
     
