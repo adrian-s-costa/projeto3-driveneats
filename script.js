@@ -141,7 +141,7 @@ function fazerPedido(){
 
     const celular = "5567992214009"
       
-    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: ${precoPedido}\n\nNome: ${nome}\nEndereço: ${endereco} `
+    var texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: ${precoPedido}\n\nNome: ${nome}\nEndereço: ${endereco} `
       
     texto = window.encodeURIComponent(texto)
     
